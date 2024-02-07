@@ -30,34 +30,34 @@ services:
     build:
       context: ./elt_script
       dockerfile: Dockerfile
-      command: [ "python", "elt_script.py" ]
-      network:
-      - elt_network
-      depends_on:
-        - source_postgres
-        - destination_postgres
-
-  dbt:
-    image: ghcr.io/dbt-labs/dbt-postgres:1.7.2
-    command:
-      [
-        "run",
-        "--profiles-dir",
-        "/root",
-        "--project-dir",
-        "/dbt",
-        "--full-refresh"
-      ]
-    networks:
-      - elt_network
-    volumes:
-      - ./transformations:/dbt
-      - ~/.dbt:/root
+    command: [ "python", "elt_script.py" ]
+    network:
+    - elt_network
     depends_on:
-      - elt_script
-    environment:
-      DBT_PROFILE: default
-      DBT_TARGET: dev
+      - source_postgres
+      - destination_postgres
+
+  # dbt:
+  #   image: ghcr.io/dbt-labs/dbt-postgres:1.7.2
+  #   command:
+  #     [
+  #       "run",
+  #       "--profiles-dir",
+  #       "/root",
+  #       "--project-dir",
+  #       "/dbt",
+  #       "--full-refresh"
+  #     ]
+  #   networks:
+  #     - elt_network
+  #   volumes:
+  #     - ./transformations:/dbt
+  #     - ~/.dbt:/root
+  #   depends_on:
+  #     - elt_script
+  #   environment:
+  #     DBT_PROFILE: default
+  #     DBT_TARGET: dev
 
 networks:
   elt_network:
