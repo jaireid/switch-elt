@@ -82,7 +82,7 @@ CREATE TABLE keyboards (
     weight_material VARCHAR(30)
 );
 
-INSERT INTO switches (keyboard_name, brand, keyboard_size, plate, weight_material) VALUES
+INSERT INTO keyboards (keyboard_name, brand, keyboard_size, plate, weight_material) VALUES
 ('Neko SE', 'MONOKEI x SingaKBD', 40, 'Copper', 'Sandblasted Copper'),
 ('S46', 'SAM', 40, 'POM', 'Mirror PVD Stainless Steel'),
 ('Derivative R1', 'JJWKB', 60, 'Aluminum', 'Stainless Steel'),
