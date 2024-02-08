@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: destination_db
+    description: "Raw data from the destination PostgreSQL database."
+    database: destination_db
+    schema: public
+    tables:
+      - name: switches
+        description: "List of switches."
+      - name: keyboards
+        description: "List of keyboards."

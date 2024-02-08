@@ -1,21 +1,75 @@
-
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: switches
+    description: "This table contains details about switches."
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: switch_id
+        description: "Unique identifier for a switch."
         tests:
           - unique
           - not_null
+      - name: switch_name
+        description: "Name of the switch."
+        tests:
+          - not_null
+      - name: manufacturer
+        description: "Switch manufacturer."
+        tests:
+          - not_null
+      - name: spring_force
+        description: "Spring force of the switch."
+        tests:
+          - not_null
+      - name: stem_type
+        description: "Stem type of the switch."
+        tests:
+          - not_null
+      - name: stem_material
+        description: "Stem material of the switch."
+        tests:
+          - not_null
+			- name: top_housing
+        description: "Top housing material of the switch."
+        tests:
+          - not_null
+			- name: bottom_housing
+        description: "Bottom housing material of the switch."
+        tests:
+          - not_null
+      - name: own_status
+        description: "Switch ownership."
+        tests:
+          - not_null
+			- name: rating
+			        description: "Rating for the switch."
+			        tests:
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: keyboards
+    description: "This table contains details about keyboards."
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: keyboard_id
+        description: "Unique identifier for a keyboard."
         tests:
           - unique
           - not_null
+      - name: keyboard_name
+        description: "Name of the keyboard."
+        tests:
+					- not_null
+			- name: brand
+        description: "Keyboard's brand."
+        tests:
+					- not_null
+			- name: keyboard_size
+	        description: "Size of the keyboard."
+	        tests:
+						- not_null
+			- name: plate
+	        description: "Plate material of the keyboard."
+	        tests:
+						- not_null
+			- name: weight_material
+	        description: "Weight material of the keyboard."
+	        tests:
+						- not_null
