@@ -52,7 +52,7 @@ dump_command = [
     '-U', source_config['user'],
     '-d', source_config['dbname'],
     '-f', 'data_dump.sql',
-    '-w'  # Do not prompt for password
+    '-w'
 ]
 
 # Set the PGPASSWORD environment variable to avoid password prompt
@@ -67,7 +67,7 @@ load_command = [
 	'-h', destination_config['host'],
 	'-U', destination_config['user'],
 	'-d', destination_config['dbname'],
-	'-a', 'f', 'data_dump.sql'
+	'-a', '-f', 'data_dump.sql'
 ]
 
 # Set the PGPASSWORD environment variable for the destination database
