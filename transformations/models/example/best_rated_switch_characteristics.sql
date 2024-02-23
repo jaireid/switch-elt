@@ -8,4 +8,4 @@ SELECT
   avg_rating
 FROM {{ ref('switch_ratings') }}
 ORDER BY avg_rating DESC
-LIMIT 5
+LIMIT 1
