@@ -18,23 +18,23 @@ models:
         tests:
           - not_null
       - name: spring_force
-        description: "Spring force of the switch."
+        description: "Switch spring force."
         tests:
           - not_null
       - name: stem_type
-        description: "Stem type of the switch."
+        description: "Switch stem type."
         tests:
           - not_null
       - name: stem_material
-        description: "Stem material of the switch."
+        description: "Switch Stem material."
         tests:
           - not_null
 			- name: top_housing
-        description: "Top housing material of the switch."
+        description: "Switch top housing material."
         tests:
           - not_null
 			- name: bottom_housing
-        description: "Bottom housing material of the switch."
+        description: "Switch bottom housing material."
         tests:
           - not_null
       - name: own_status
@@ -42,8 +42,8 @@ models:
         tests:
           - not_null
 			- name: rating
-			        description: "Rating for the switch."
-			        tests:
+          description: "Rating for the switch."
+          tests:
 
   - name: keyboards
     description: "This table contains details about keyboards."
@@ -66,10 +66,119 @@ models:
 	        tests:
 						- not_null
 			- name: plate
-	        description: "Plate material of the keyboard."
+	        description: "Keyboard plate material ."
 	        tests:
 						- not_null
 			- name: weight_material
-	        description: "Weight material of the keyboard."
+	        description: "Keyboard weight material."
 	        tests:
 						- not_null
+
+  - name: switch_ratings
+    description: "Aggregate ratings for switch characteristics."
+    columns:
+      - name: switch_type
+        description: "Type of the switch."
+        tests:
+          - not_null
+      - name: spring_force
+        description: "Switch spring force."
+        tests:
+          - not_null
+      - name: stem_type
+        description: "Switch stem type."
+        tests:
+          - not_null
+      - name: stem_material
+        description: "Switch Stem material."
+        tests:
+          - not_null
+      - name: top_housing
+        description: "Switch top housing material."
+        tests:
+          - not_null
+      - name: bottom_housing
+        description: "Switch bottom housing material."
+        tests:
+          - not_null
+      - name: avg_rating
+        description: "Average rating for the combination of switch characteristics."
+        tests:
+          - not_null
+
+  - name: best_rated_switch_characteristics
+    description: "Best-rated switch characteristics."
+    columns:
+      - name: switch_type
+        description: "Type of the switch."
+        tests:
+          - not_null
+      - name: spring_force
+        description: "Switch spring force."
+        tests:
+          - not_null
+      - name: stem_type
+        description: "Switch stem type."
+        tests:
+          - not_null
+      - name: stem_material
+        description: "Switch Stem material."
+        tests:
+          - not_null
+      - name: top_housing
+        description: "Switch top housing material."
+        tests:
+          - not_null
+      - name: bottom_housing
+        description: "Switch bottom housing material."
+        tests:
+          - not_null
+      - name: avg_rating
+        description: "Average rating for the combination of switch characteristics."
+        tests:
+          - not_null
+
+  name: potential_next_switch_purchase
+    description: "Potential next switch purchase based on best-rated characteristics."
+    columns:
+      - name: switch_id
+        description: "Unique identifier for a switch."
+        tests:
+          - unique
+          - not_null
+      - name: switch_name
+        description: "Name of the switch."
+        tests:
+          - not_null
+      - name: manufacturer
+        description: "Switch manufacturer."
+        tests:
+          - not_null
+      - name: spring_force
+        description: "Switch spring force."
+        tests:
+          - not_null
+      - name: stem_type
+        description: "Switch stem type"
+        tests:
+          - not_null
+      - name: stem_material
+        description: "Switch Stem material."
+        tests:
+          - not_null
+      - name: top_housing
+        description: "Switch top housing material."
+        tests:
+          - not_null
+      - name: bottom_housing
+        description: "Switch bottom housing material."
+        tests:
+          - not_null
+      - name: rating
+        description: "Rating for the switch."
+        tests:
+          - not_null
+      - name: own_status
+        description: "Switch ownership."
+        tests:
+          - not_null
