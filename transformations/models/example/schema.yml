@@ -78,8 +78,8 @@ models:
   - name: switch_ratings
     description: "Aggregate ratings for switch characteristics."
     columns:
-      - name: switch_type
-        description: "Type of the switch."
+      - name: switch_name
+        description: "Name of switch."
         tests:
           - not_null
       - name: spring_force
@@ -110,8 +110,8 @@ models:
   - name: best_rated_switch_characteristics
     description: "Best-rated switch characteristics."
     columns:
-      - name: switch_type
-        description: "Type of the switch."
+      - name: switch_name
+        description: "Name of switch."
         tests:
           - not_null
       - name: spring_force
