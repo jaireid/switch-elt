@@ -29,11 +29,11 @@ models:
         description: "Switch stem material."
         tests:
           - not_null
-			- name: top_housing
+      - name: top_housing
         description: "Switch top housing material."
         tests:
           - not_null
-			- name: bottom_housing
+      - name: bottom_housing
         description: "Switch bottom housing material."
         tests:
           - not_null
@@ -41,9 +41,10 @@ models:
         description: "Switch ownership."
         tests:
           - not_null
-			- name: rating
-          description: "Rating for the switch."
-          tests:
+      - name: rating
+        description: "Rating for the switch."
+        tests:
+          - not_null
 
   - name: keyboards
     description: "This table contains details about keyboards."
@@ -56,23 +57,23 @@ models:
       - name: keyboard_name
         description: "Name of the keyboard."
         tests:
-					- not_null
-			- name: brand
+          - not_null
+      - name: brand
         description: "Keyboard's brand."
         tests:
-					- not_null
-			- name: keyboard_size
-	        description: "Size of the keyboard."
-	        tests:
-						- not_null
-			- name: plate
-	        description: "Keyboard plate material ."
-	        tests:
-						- not_null
-			- name: weight_material
-	        description: "Keyboard weight material."
-	        tests:
-						- not_null
+          - not_null
+      - name: keyboard_size
+        description: "Size of the keyboard."
+        tests:
+          - not_null
+      - name: plate
+        description: "Keyboard plate material ."
+        tests:
+          - not_null
+      - name: weight_material
+        description: "Keyboard weight material."
+        tests:
+          - not_null
 
   - name: switch_ratings
     description: "Aggregate ratings for switch characteristics."
@@ -138,7 +139,7 @@ models:
         tests:
           - not_null
 
-  name: potential_next_switch_purchase
+  - name: potential_next_switch_purchase
     description: "Potential next switch purchase based on best-rated characteristics."
     columns:
       - name: switch_id
