@@ -1,5 +1,5 @@
 SELECT
-  switch_type,
+  switch_name,
   spring_force,
   stem_type,
   stem_material,

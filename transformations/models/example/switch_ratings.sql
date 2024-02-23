@@ -1,5 +1,5 @@
 SELECT
-  switch_type,
+  switch_name,
   spring_force,
   stem_type,
   stem_material,
@@ -8,7 +8,7 @@ SELECT
   AVG(rating) AS avg_rating
 FROM {{ ref('switches') }}
 GROUP BY
-  switch_type,
+  switch_name,
   spring_force,
   stem_type,
   stem_material,
