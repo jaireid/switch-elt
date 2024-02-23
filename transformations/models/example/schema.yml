@@ -26,7 +26,7 @@ models:
         tests:
           - not_null
       - name: stem_material
-        description: "Switch Stem material."
+        description: "Switch stem material."
         tests:
           - not_null
 			- name: top_housing
