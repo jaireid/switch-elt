@@ -5,7 +5,7 @@ SELECT
   stem_material,
   top_housing,
   bottom_housing,
-  AVG(rating) AS avg_rating
+  ROUND(AVG(rating), 2) AS avg_rating
 FROM {{ ref('switches') }}
 GROUP BY
   switch_name,
